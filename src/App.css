@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home page */
+.homepage{
+  background: #ee9ca7; 
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);    
+  width: 100%;
+  height: 100vh;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  margin: auto 1px;
+}
+.greetings{
+  
+  padding: 30px;
+  margin: auto 10px;
+}
+.link-btn{
+
+    height: 100vh;
+    width: 600px;
+    margin: 50px ;
+    
+
+}
+.link-btn .add-todo-btn,.show-todo-btn{
+  width: 100%;
+  padding: 20px 0 20px 0;
+  
+
+}
+.link-btn ,.add,.show{
+  width: 380px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Add Todo Page */
+.Addtodo-Page{
+  background: #b29cee; 
+  background: linear-gradient(to right, #2f24ff, #2a5bfa); 
+  width: 100%;
+  height: 100vh;
+  color: #000000;
+}
+.add-section{
+  width: 50%;
+  height: 40vh;
+  margin: 20px auto;
+
+}
+.Addtodo-Page h1{
+  width: 100%;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  text-align: center;
+}
+.Addtodo-Page .add,.show{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+.Addtodo-Page input{
+  padding: 10px;
+  font-size: 20px;
+}
+.Addtodo-Page label{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* Show todo page */
+
+.Showtodo-Page{
+  background: #fedffd; 
+  background: linear-gradient(to right, #ffffff, #ffffff); 
+}
+.single-todo{
+  margin:10px ;
+  display: inline;
+}
+.header-in-show-todo{
+  width: 600px;
+  padding: 10px;
+  margin: 10px auto;
+}
+.header-in-show-todo .search{
+  width: 100%;
+  margin: 20px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Mobile View */
+@media only screen and (max-width:650px) {
+  .homepage{
+    background: #ee9ca7; 
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);    
+    width: 100%;
+    height: 100vh;
+    padding:50px;
   }
-  to {
-    transform: rotate(360deg);
+  .link-btn{
+    width: 100%;
+    height: 100vh;
+    margin: 50% auto;
+  }
+  .add-todo-btn{
+    width: 100%;
+    margin: 2px;
+    padding: 10px;
+  }
+  .show-todo-btn{
+    width: 100%;
+    margin: 2px;
+    padding: 10px;
+  }
+  .add-todo-btn .add{
+    width: 100%;
+    padding: 10px;
+  }
+  .show-todo-btn .show{
+    width: 100%;
+    padding: 10px;
+  }
+  /* Add Todo Page */
+  .add-section{
+    width: 100%;
+    height: 90vh;
+    margin: 20px auto;
+  
+  }
+  .Addtodo-Page{
+    background: #b29cee; 
+    background: linear-gradient(to right, #2f24ff, #2a5bfa); 
+    width: 100%;
+    height: 100vh;
+    color: #000000;
+  }
+  .Addtodo-Page h1{
+    width: 100%;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+  }
+  .Addtodo-Page .add,.show{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .Addtodo-Page input{
+    padding: 10px;
+    font-size: 20px;
+  }
+  .Addtodo-Page label{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  /* Show todo page */
+  .Showtodo-Page{
+    background: #fedffd; 
+    background: linear-gradient(to right, #ffffff, #ffffff); 
+  }
+  .single-todo{
+    width: 90%;
+    margin:30px ;
+  }
+  .search{
+    width: 100%;
+    margin: 20px auto;
   }
 }

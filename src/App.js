@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Home from './Conponents/Home';
+import { BrowserRouter as Routers, Routes, Route, Link } from "react-router-dom";
+import AddTodo from './Conponents/AddTodo';
+import ShowTodo from './Conponents/ShowTodo.js';
 function App() {
+
+  const pull_data=(data)=>{
+    console.log(data)
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routers>
+    <div className="app">
+        <Routes>
+        <Route path='/' element={<Home />} />
+          <Route path='/addtodo' element={<AddTodo pull_data={pull_data}/>} />
+          <Route path='/showtodo' element={<ShowTodo pull_data={pull_data}/>} />
+       </Routes>
+
     </div>
+    </Routers>
   );
 }
 
